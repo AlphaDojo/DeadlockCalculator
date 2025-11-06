@@ -1,0 +1,32 @@
+@page "/character"
+@using DeadlockCalculator.Models
+@inject HttpClient Http
+
+<h3>Character Page</h3> 
+@if (character == null) 
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>Character Name: @character.Name</p>
+    <p>Character Boon Level: @character.Boon</p>
+    <button @onclick="LevelUpCharacter">Level Up</button>
+}
+
+
+
+@code {
+    private Character? character;
+
+    protected override async Task OnInitializedAsync()
+    {
+        character = await Http.GetFromJsonAsync<Character>("data/character.json");
+    }
+
+    private void LevelUpCharacter()
+    {
+        character?.LevelUp();
+    }
+
+}

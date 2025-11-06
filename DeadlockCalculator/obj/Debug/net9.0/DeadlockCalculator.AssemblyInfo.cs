@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeadlockCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+678bd3bc5eaaa90e6f87e6184074971c823e971e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeadlockCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeadlockCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
