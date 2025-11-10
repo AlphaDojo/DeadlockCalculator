@@ -2,31 +2,33 @@
 @using DeadlockCalculator.Models
 @inject HttpClient Http
 
-<h3>Character Page</h3> 
-@if (character == null) 
+<h3>Character Page</h3>
+@if (characters == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <p>Character Name: @character.Name</p>
-    <p>Character Boon Level: @character.Boon</p>
-    <button @onclick="LevelUpCharacter">Level Up</button>
+    @foreach (var character in characters)
+    {
+        <NavLink href="@($"/character/{character.Name}")">Character Name: @character.Name</NavLink>
+    }
+
 }
 
 
 
 @code {
-    private Character? character;
+    private Character[]? characters;
 
     protected override async Task OnInitializedAsync()
     {
-        character = await Http.GetFromJsonAsync<Character>("data/character.json");
+        characters = await Http.GetFromJsonAsync<Character[]>("data/character.json");
     }
 
-    private void LevelUpCharacter()
+    @* private void LevelUpCharacter()
     {
         character?.LevelUp();
-    }
+    } *@
 
 }

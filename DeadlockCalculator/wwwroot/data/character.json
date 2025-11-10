@@ -1,4 +1,10 @@
-{
-  "Name": "Wraith",
-  "Boon": 3
-}
+[
+  {
+    "Name": "Haze",
+    "Boon": 1
+  },
+  {
+    "Name": "Wraith",
+    "Boon": 1
+  }
+]
