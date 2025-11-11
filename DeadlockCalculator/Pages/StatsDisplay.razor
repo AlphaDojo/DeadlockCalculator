@@ -1,2 +1,25 @@
 @page "/character/{name}"
+@using DeadlockCalculator.Models
+@inject CharacterService CharacterService
 
+@if (character == null)
+{
+    <p>No character found.</p>
+}
+else
+{
+    <p>Name: @character.Name</p>
+    <p>Boon: @character.Boon</p>
+}
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = default!;
+
+    private Character? character;
+
+    protected override void OnInitialized()
+    {
+        character = CharacterService.GetAllCharacters().FirstOrDefault(c => c.Name == Name);
+    }
+}

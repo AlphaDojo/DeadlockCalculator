@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "DeadlockCalculator",
   "resources": {
-    "hash": "sha256-WrG1Il4ZFUR4zE90GOSGO4dPwbi+pzhtLSaCapiYqUE=",
+    "hash": "sha256-+QGPJK1rocuOH4rJ0iA2dhjY4BD6gjeVTpLYH8dTkqI=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.50odlujk1g.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.nxuc56wpt2.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -201,8 +201,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "DeadlockCalculator.q74lxc40gg.wasm": "DeadlockCalculator.wasm",
-      "DeadlockCalculator.1vr3bcmhnq.pdb": "DeadlockCalculator.pdb"
+      "DeadlockCalculator.40ih0k85x1.wasm": "DeadlockCalculator.wasm",
+      "DeadlockCalculator.9j2ujaopjr.pdb": "DeadlockCalculator.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.l4ptthxatg.js": "sha256-ddUN4+taa/Qv7Mr8mLpunJO+0Xw3ViOqBvedhe57/hA="
@@ -412,10 +412,10 @@
       "WindowsBase.ahs9krftg4.wasm": "sha256-bgi2FHdT0ABsUP1yKQQ2AP8qfo1V/bS/4cJFE4OUHX8=",
       "mscorlib.k5iaovx9v7.wasm": "sha256-mEFLDERlY1HMNQHzh68xOPawXvI48O1fHW9PbfXugb4=",
       "netstandard.6sr1qvn64m.wasm": "sha256-Gpf+qEqCYaCB6zqI5sNPIurnfpwRtfcWksgf3CW6mHE=",
-      "DeadlockCalculator.q74lxc40gg.wasm": "sha256-akYXPqf4bWy3REF4uExQbK3lC7hua9vrKjPWUWXRJp8="
+      "DeadlockCalculator.40ih0k85x1.wasm": "sha256-ZAXGEfJDzjd0JB8vOCIBy5mylxOgsVjtMXOgd7UM2cY="
     },
     "pdb": {
-      "DeadlockCalculator.1vr3bcmhnq.pdb": "sha256-MxUXaikoRua9LvvYV+1nKl0d4eVF6tSemYu35Ojiqdg="
+      "DeadlockCalculator.9j2ujaopjr.pdb": "sha256-VYND/XMzOFhszge4Q0N75AncyPzD1fZAK37lILBjWdg="
     }
   },
   "cacheBootResources": true,

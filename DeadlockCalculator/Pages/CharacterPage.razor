@@ -1,6 +1,8 @@
 @page "/character"
 @using DeadlockCalculator.Models
 @inject HttpClient Http
+@inject CharacterService CharacterService
+@inject NavigationManager NavManager
 
 <h3>Character Page</h3>
 @if (characters == null)
@@ -11,7 +13,8 @@ else
 {
     @foreach (var character in characters)
     {
-        <NavLink href="@($"/character/{character.Name}")">Character Name: @character.Name</NavLink>
+        <button @onclick="() => SelectCharacter(character)">Character Name: @character.Name</button>
+        <br/>
     }
 
 }
@@ -19,16 +22,18 @@ else
 
 
 @code {
-    private Character[]? characters;
+    private List<Character>? characters;
 
     protected override async Task OnInitializedAsync()
     {
-        characters = await Http.GetFromJsonAsync<Character[]>("data/character.json");
+        await CharacterService.LoadAsync();
+        characters = CharacterService.GetAllCharacters();
     }
 
-    @* private void LevelUpCharacter()
+    public void SelectCharacter(Character character)
     {
-        character?.LevelUp();
-    } *@
+        CharacterService.SetSelected(character);
+        NavManager.NavigateTo($"/character/{character.Name}");
+    }
 
 }
