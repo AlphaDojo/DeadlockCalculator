@@ -1,10 +1,80 @@
 [
   {
     "Name": "Haze",
-    "Boon": 1
+    "Boon": 1,
+    "souls": 0,
+    "gunStats": {
+      "bulletDamage": 5.04,
+      "bulletPerSecond": 9.52,
+      "ammo": 25,
+      "reloadTime": 2.35,
+      "bulletVelocity": 762,
+      "bulletLifesteal": 0,
+      "weaponDamage": 0,
+      "fireRate": 0,
+      "clipSizeIncrease": 0,
+      "reloadReduction": 0,
+      "bulletVelocityIncrease": 0,
+      "critBonusScale": 0
+    },
+    "vitalityStats": {
+      "maxHealth": 650,
+      "healAmp": 0,
+      "bulletResist": 0,
+      "meleeResist": 0,
+      "critReduction": 0,
+      "healthRegen": 2,
+      "nonCombatRegen": 0,
+      "spiritResist": 0,
+      "debuffResist": 0
+    },
+    "spiritStats": {
+      "SpiritPower": 0,
+      "abilityCooldown": 0,
+      "abilityRange": 0,
+      "maxChargesIncrease": 0,
+      "abilityDuration": 0,
+      "spiritLifesteal": 0,
+      "chargeCooldown": 0
+    }
   },
   {
     "Name": "Wraith",
-    "Boon": 1
+    "Boon": 1,
+    "souls": 0,
+    "gunStats": {
+      "bulletDamage": 15.5,
+      "bulletPerSecond": 3.2,
+      "ammo": 30,
+      "reloadTime": 2.1,
+      "bulletVelocity": 900,
+      "bulletLifesteal": 0,
+      "weaponDamage": 20,
+      "fireRate": 4,
+      "clipSizeIncrease": 0,
+      "reloadReduction": 0,
+      "bulletVelocityIncrease": 0,
+      "critBonusScale": 0
+    },
+    "vitalityStats": {
+      "maxHealth": 650,
+      "healAmp": 0,
+      "bulletResist": 0,
+      "meleeResist": 0,
+      "critReduction": 0,
+      "healthRegen": 2,
+      "nonCombatRegen": 0,
+      "spiritResist": 0,
+      "debuffResist": 0
+    },
+    "spiritStats": {
+      "SpiritPower": 0,
+      "abilityCooldown": 0,
+      "abilityRange": 0,
+      "maxChargesIncrease": 0,
+      "abilityDuration": 0,
+      "spiritLifesteal": 0,
+      "chargeCooldown": 0
+    }
   }
 ]
