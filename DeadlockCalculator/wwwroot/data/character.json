@@ -36,6 +36,12 @@
       "abilityDuration": 0,
       "spiritLifesteal": 0,
       "chargeCooldown": 0
+    },
+    "Boons": {
+      "BaseBulletDamage": 0.13,
+      "BaseMeleeDamage": 1.6,
+      "SpiritPower": 1.1,
+      "BaseHealth": 33
     }
   },
   {
@@ -75,6 +81,12 @@
       "abilityDuration": 0,
       "spiritLifesteal": 0,
       "chargeCooldown": 0
+    },
+    "Boons": {
+      "BaseBulletDamage": 0.16,
+      "BaseMeleeDamage": 1.6,
+      "SpiritPower": 1.1,
+      "BaseHealth": 35
     }
   }
 ]

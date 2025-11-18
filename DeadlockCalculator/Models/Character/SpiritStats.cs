@@ -2,7 +2,7 @@ namespace DeadlockCalculator.Models
 {
     public class SpiritStats
     {
-        public int SpiritPower { get; set; }
+        public double SpiritPower { get; set; }
         public double AbilityCooldown { get; set; }
         public double AbilityRange { get; set; }
         public int MaxChargesIncrease { get; set; }

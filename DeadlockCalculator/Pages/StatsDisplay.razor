@@ -16,6 +16,9 @@ grid-template-columns: auto auto;
   font-size: 30px;
   text-align: center;
 }
+.gun { background-color: rgb(219, 160, 33); }
+.vitality { background-color: rgb(70, 175, 49); }
+.spirit { background-color: rgb(184, 133, 218); }
 </style>
 
 @if (character == null)
@@ -26,39 +29,47 @@ else
 {
     <p>Name: @character.Name</p>
     <p>Boon: @character.Boon</p>
+    <button @onclick="ApplyBoonsToCharacter">Apply Boons</button>
 
     <h3>Gun Stats:</h3>
     <br />
-    <div class="container">
+    <div class="container gun">
         <div>Bullet Damage: @character.GunStats.BulletDamage</div>
-        <div>Bullet Per Second @character.GunStats.BulletPerSecond</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
+        <div>Weapon Damage: @($"{character.GunStats.WeaponDamage}%")</div>
+        <div>Bullet Per Sec @character.GunStats.BulletPerSecond</div>
+        <div>Fire Rate: @($"{character.GunStats.FireRate}%")</div>
+        <div>Ammo: @character.GunStats.Ammo</div>
+        <div>Clip Size Increase: @($"{character.GunStats.ClipSizeIncrease}%")</div>
+        <div>Reload Time @($"{character.GunStats.ReloadTime}s")</div>
+        <div>Reload Reduction @($"{character.GunStats.ReloadReduction}%")</div>
+        <div>Bullet Velocity: @($"{character.GunStats.BulletVelocity}m/s")</div>
+        <div>Bullet Velocity: Increase @($"{character.GunStats.BulletVelocityIncrease}%")</div>
+        <div>Bullet Lifesteal: @($"{character.GunStats.BulletLifesteal}%")</div>
+        <div>Crit Bonus Scale: @($"{character.GunStats.CritBonusScale}%")</div>
     </div>
     <br />
     <h3>Vitality Stats:</h3>
     <br />
-    <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
+    <div class="container vitality">
+        <div>Max Health: @character.VitalityStats.MaxHealth</div>
+        <div>Health Regen: @character.VitalityStats.HealthRegen</div>
+        <div>Heal Amp: @($"{character.VitalityStats.HealAmp}%")</div>
+        <div>Non-Combat Regen: @character.VitalityStats.NonCombatRegen</div>
+        <div>Bullet Resist: @($"{character.VitalityStats.BulletResist}%")</div>
+        <div>Spirit Resist: @($"{character.VitalityStats.SpiritResist}%")</div>
+        <div>Melee Resist: @($"{character.VitalityStats.MeleeResist}%")</div>
+        <div>Debuff Resist: @($"{character.VitalityStats.DebuffResist}%")</div>
+        <div>Crit Reduction: @($"{character.VitalityStats.CritReduction}%")</div>
     </div>
     <h3>Spirit Stats:</h3>
     <br />
-    <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
+    <div class="container spirit">
+        <div>Ability Cooldown: @($"{character.SpiritStats.AbilityCooldown}%")</div>
+        <div>Ability Duration: @($"{character.SpiritStats.AbilityDuration}%")</div>
+        <div>Ability range: @($"{character.SpiritStats.AbilityRange}%")</div>
+        <div>Spirit Lifesteal: @($"{character.SpiritStats.SpiritLifesteal}%")</div>
+        <div>Max Charges Increase: @character.SpiritStats.MaxChargesIncrease</div>
+        <div>Charge Cooldown: @($"{character.SpiritStats.ChargeCooldown}%")</div>
     </div>
 }
 
@@ -72,4 +83,12 @@ else
     {
         character = CharacterService.GetAllCharacters().FirstOrDefault(c => c.Name == Name);
     }
-}
+
+    private void ApplyBoonsToCharacter()
+    {
+        if (character != null)
+        {
+            character.LevelUp();
+        }
+    }
+}   

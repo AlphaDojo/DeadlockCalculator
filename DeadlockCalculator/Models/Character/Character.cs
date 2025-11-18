@@ -8,6 +8,7 @@ namespace DeadlockCalculator.Models
         public GunStats GunStats { get; set; } = new GunStats();
         public VitalityStats VitalityStats { get; set; } = new VitalityStats();
         public SpiritStats SpiritStats { get; set; } = new SpiritStats();
+        public Boon Boons { get; set; } = new Boon();
         public List<Item> Items { get; set; } = [];
 
 
@@ -18,7 +19,10 @@ namespace DeadlockCalculator.Models
 
         public void LevelUp()
         {
-            Boon++;
+            GunStats.BulletDamage += Boons.BaseBulletDamage;
+            VitalityStats.MaxHealth += Boons.BaseHealth;
+            SpiritStats.SpiritPower += Math.Ceiling(Boons.SpiritPower);
+
         }
     }
 }
