@@ -11,11 +11,18 @@ namespace DeadlockCalculator.Models
 
         public async Task LoadAsync()
         {
-            if (_isLoaded) return;
+            if (_isLoaded)
+            {
+                return;
+            } 
 
             var data = await _http.GetFromJsonAsync<List<Character>>("data/character.json");
+
             if (data != null)
+            {
                 CharacterList = data;
+            }
+                
 
             _isLoaded = true;
         }
@@ -27,14 +34,11 @@ namespace DeadlockCalculator.Models
 
         public List<Character> GetAllCharacters() => CharacterList;
 
-        public void AddCharacter(Character character)
-        {
-            CharacterList.Add(character);
-        }
 
+//fix this later
         public void SetSelected(Character c)
         {
-            _selectedCharacter = c;
+            _selectedCharacter = new Character(c);
         }
 
         public Character? GetSelected()

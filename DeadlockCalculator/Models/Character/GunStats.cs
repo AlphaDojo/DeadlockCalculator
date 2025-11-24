@@ -14,5 +14,25 @@ namespace DeadlockCalculator.Models
         public int ReloadReduction { get; set; }
         public int BulletVelocityIncrease { get; set; }
         public int CritBonusScale { get; set; }
+
+        public GunStats()
+        {
+        }
+
+        public GunStats(GunStats original)
+        {
+            BulletDamage = original.BulletDamage;
+            BulletPerSecond = original.BulletPerSecond;
+            Ammo = original.Ammo;
+            ReloadTime = original.ReloadTime;
+            BulletVelocity = original.BulletVelocity;
+            BulletLifesteal = original.BulletLifesteal;
+            WeaponDamage = original.WeaponDamage;
+            FireRate = original.FireRate;
+            ClipSizeIncrease = original.ClipSizeIncrease;
+            ReloadReduction = original.ReloadReduction;
+            BulletVelocityIncrease = original.BulletVelocityIncrease;
+            CritBonusScale = original.CritBonusScale;
+        }
     }
 }

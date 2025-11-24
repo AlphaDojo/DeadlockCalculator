@@ -28,7 +28,7 @@ grid-template-columns: auto auto;
 else
 {
     <p>Name: @character.Name</p>
-    <p>Boon: @character.Boon</p>
+    <p>Boon: @character.Boons.level</p>
     <button @onclick="ApplyBoonsToCharacter">Apply Boons</button>
 
     <h3>Gun Stats:</h3>
@@ -61,7 +61,7 @@ else
         <div>Debuff Resist: @($"{character.VitalityStats.DebuffResist}%")</div>
         <div>Crit Reduction: @($"{character.VitalityStats.CritReduction}%")</div>
     </div>
-    <h3>Spirit Stats:</h3>
+    <h3>Spirit Stats: test</h3>
     <br />
     <div class="container spirit">
         <div>Ability Cooldown: @($"{character.SpiritStats.AbilityCooldown}%")</div>
@@ -78,10 +78,23 @@ else
     public string Name { get; set; } = default!;
 
     private Character? character;
+    private Character? SetCharacter;
+    private List<Character>? characters;
 
-    protected override void OnInitialized()
+
+    protected override async Task OnInitializedAsync()
     {
-        character = CharacterService.GetAllCharacters().FirstOrDefault(c => c.Name == Name);
+        await CharacterService.LoadAsync();
+        characters = CharacterService.GetAllCharacters();
+        SetCharacter = CharacterService.GetAllCharacters().FirstOrDefault(c => c.Name == Name);
+
+        if(SetCharacter != null) {
+            CharacterService.SetSelected(SetCharacter);
+            character = CharacterService.GetSelected();
+        } else {
+            character = null;
+        }
+        
     }
 
     private void ApplyBoonsToCharacter()
