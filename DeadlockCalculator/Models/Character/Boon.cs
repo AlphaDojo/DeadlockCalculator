@@ -3,9 +3,9 @@ namespace DeadlockCalculator.Models
     public class Boon
     {
         public int level { get; private set; }
-        public double BaseBulletDamage { get; set; }
-        public double BaseMeleeDamage { get; set; }
-        public double SpiritPower { get; set; }
+        public decimal BaseBulletDamage { get; set; }
+        public decimal BaseMeleeDamage { get; set; }
+        public decimal SpiritPower { get; set; }
         public int BaseHealth { get; set; }
 
         public Boon()
