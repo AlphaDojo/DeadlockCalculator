@@ -1,6 +1,18 @@
-bin/
-obj/
-.vs/
+# .NET build folders
+*.bin/
+*.obj/
+
+# Visual Studio files
 *.user
 *.suo
-*.DS_Store
+*.userosscache
+*.vs/
+
+# Rider IDE
+.idea/
+
+# VS Code
+.vscode/
+
+# Debug log files
+*.log
